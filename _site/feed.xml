@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloud Infinite</title>
+    <description>AndyKong's blog,use Jekyll and github pages.</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 26 Oct 2017 23:53:31 +0800</pubDate>
+    <lastBuildDate>Thu, 26 Oct 2017 23:53:31 +0800</lastBuildDate>
+    <generator>Jekyll v3.5.2</generator>
+    
+      <item>
+        <title>海外站长遇到的那些事</title>
+        <description>&lt;h3 id=&quot;老王遇到的问题一&quot;&gt;老王遇到的问题一&lt;/h3&gt;
+
+&lt;p&gt;老王有一个网站www.foo.com常年放在国外服务器上，原因嘛，无外乎国外主机便宜，使用方便，还不需要备案。随着最近业务发展顺利，网站的流量逐渐增加，由于大量的访问都来自于国内大陆地区，开始有访问者不断和老王抱怨网站访问速度慢和不稳定的问题。老王找来了懂技术的老刘来帮忙优化他的网站访问速度，老刘说弄个CDN试试，需要做这么几件事：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;新建个资源域名，比如static.foo.com或者img.foo.com&lt;/li&gt;
+  &lt;li&gt;找个CDN，然后把上面的资源域名都指过去&lt;/li&gt;
+  &lt;li&gt;重构整个网站的页面的静态资源URL域名，变成static.foo.com或者img.foo.com&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;老王折腾来折腾去，又发现两个新问题绕不过去：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;因为域名在国内没有备案，所以他不能使用国内的CDN&lt;/li&gt;
+  &lt;li&gt;重构网站的所有静态资源URL是个大活，而且他的网站还用的第三方程序，改起来可没那么简单&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;老刘后来告诉老王，他最近发现一款新的云加速产品——魔门云，能帮助他解决眼前的问题，而且差不多是全球唯一一家使用黑科技解决类似场景问题的产品。老王不解，是什么黑科技这么牛D呢？&lt;/p&gt;
+
+&lt;h3 id=&quot;rewriteurl黑科技&quot;&gt;RewriteURL？黑科技？&lt;/h3&gt;
+
+&lt;p&gt;按照老刘的说法，魔门云为了服务好这一场景（网站服务器在海外，但是访问者确来自于国内），做了以下这些事：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;在东亚地区（香港、台湾、韩国、日本）都联系了各种VPS和VPC，保证了大陆地区到魔门云节点的网络连通稳定性，同时也保证了魔门云节点到其他海外地区（美国）的网络连通稳定性。&lt;/li&gt;
+  &lt;li&gt;Rewrite URL功能——当老王的网页响应经过魔门云网络的时候，页面内的所有www.foo.com域名下的静态资源都会被自动改写到魔门云的CDN域名上（例如 cdn-x-y.momentcdn.com），这些静态资源的请求最终会被路由并且被缓存到魔门云在国内的CDN合作伙伴节点上。从而大大的提高了国内访问者的访问静态内容的速度。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;老王折腾来折腾去的两个问题被魔门云很好的解决了！&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;static.abc.com域名在国内没有备案？没关系，魔门云可以RewriteURL到国内CDN。&lt;/li&gt;
+  &lt;li&gt;重构网站的资源URL是个大活？没关系，魔门云可以自动RewriteURL到CDN的域名上。&lt;/li&gt;
+  &lt;li&gt;动态内容不能被缓存？没关系，魔门云可以在东亚地区缓存部分内容。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;老王遇到的问题二&quot;&gt;老王遇到的问题二&lt;/h3&gt;
+
+&lt;p&gt;老王的网页很多都是动态内容，不能被CDN缓存，所以大部分请求还是会经过全链路（国内-&amp;gt;魔门云网络-&amp;gt;老王的国外服务器），有些时候，因为链路过长，导致部分请求还是会慢。老刘告诉老王，这个问题魔门云也有黑科技解决。老王一惊，这魔门云有这么多牛D的黑科技？&lt;/p&gt;
+
+&lt;p&gt;按照老刘的说法，这种黑科技叫PageRunner，大概意思是让动态页面缓存的部分往离国内近的地方跑跑。对于大多数动态页面来说，虽然内容不能全部被缓存，但是页面里的大多数静态JS和CSS资源其实对于每个访问者来说都是相同的。魔门云就是依靠浏览器预取技术，把老王的动态网页内包含的这部分内容缓存在Edge节点（东亚地区），一旦访问请求到了魔门云网络，就先把这部分缓存内容返回给浏览器（国内），同时也把请求转发到老王的国外服务器（美国），当拿到全部响应后，再把剩余部分内容返回给浏览器（国内）。看吧！老王的问题二是不是也解决了？&lt;/p&gt;
+
+&lt;h3 id=&quot;隔壁老郑遇到的问题&quot;&gt;隔壁老郑遇到的问题&lt;/h3&gt;
+
+&lt;p&gt;自从使用了魔门云，老王收到的网站访问速度慢的抱怨比之前少多了，网站访问量又增加了许多，业务一天天好起来，老王嘴里乐开了花。But 隔壁老郑跟老王吐槽，老郑也有个网站做业务，只不过有个友商（对头）找了个帮手隔三差五的就攻击老郑的网站，业务快做不下去了。老王一生气说：这哪成？！赶紧找魔门云帮忙。&lt;/p&gt;
+
+&lt;p&gt;按照之前老刘的说法，常见的网站攻击大概分两类：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;利用网站程序漏洞入侵&lt;/li&gt;
+  &lt;li&gt;流量攻击，这个又分为CC攻击和DDOS攻击&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;魔门云提供个All-In-One的服务，除了提供加速外，还有提供安全方面的服务。魔门云WAF除了防止黑客利用网站程序漏洞入侵外，还能过滤CC攻击和缓解DDOS攻击。几乎不用配置，就能享受这个服务，真是太方便了。这下老郑的问题解决了！&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 31 Jan 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/wpo/2017/01/31/cachemoment-intro-001.html</link>
+        <guid isPermaLink="true">http://localhost:4000/wpo/2017/01/31/cachemoment-intro-001.html</guid>
+        
+        <category>CDN</category>
+        
+        <category>魔门云</category>
+        
+        
+        <category>WPO</category>
+        
+      </item>
+    
+  </channel>
+</rss>

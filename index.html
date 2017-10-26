@@ -51,6 +51,15 @@ permalink: /
   {% include sections/{{section.tpl}} %}
 </section>
 {% endfor %}
+<section class="features contact" style="margin-top: 0;">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
+            <p id="jalpc_site_pv"><strong>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}</strong></p>
+        </div>
+    </div>
+</div>
+</section>
 <style>
 iframe {
   -moz-transform: scale(0.25, 0.25);
@@ -65,4 +74,3 @@ iframe {
   transform-origin: top left;
 }
 </style>
-<iframe src="https://www.maimemo.com/share/page/?uid=779139&pid=660" style="display: none;"></iframe>

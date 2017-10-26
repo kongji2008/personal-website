@@ -1,29 +1,71 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
 - name:
-    detail: Company A
-    i18n: company_a
+    detail:
+    i18n: cachemoment
   desc:
-    detail: I worked at Company A ...
-    i18n: company_a_desc
+    detail:
+    i18n: cachemoment_desc
   date:
-    detail: Apr. 2016
-    i18n: company_a_date
+    detail:
+    i18n: cachemoment_date
   job:
-    detail: CTO
-    i18n: company_a_job
+    detail:
+    i18n: cachemoment_job
   icon: fa-plus-square
 
 - name:
-    detail: Company B
-    i18n: company_b
+    detail:
+    i18n: yottaaB
   desc:
-    detail: I worked at Company B ...
-    i18n: company_b_desc
+    detail:
+    i18n: yottaaB_desc
   date:
-    detail: Jun. 2015
-    i18n: company_b_date
+    detail:
+    i18n: yottaaB_date
   job:
-    detail: Full Stack Developer
-    i18n: company_b_job
+    detail:
+    i18n: yottaaB_job
+  icon: fa-plus-square
+
+- name:
+    detail:
+    i18n: yottaaA
+  desc:
+    detail:
+    i18n: yottaaA_desc
+  date:
+    detail:
+    i18n: yottaaA_date
+  job:
+    detail:
+    i18n: yottaaA_job
+  icon: fa-plus-square
+
+- name:
+    detail:
+    i18n: 99bill
+  desc:
+    detail:
+    i18n: 99bill_desc
+  date:
+    detail:
+    i18n: 99bill_date
+  job:
+    detail:
+    i18n: 99bill_job
+  icon: fa-plus-square
+
+- name:
+    detail:
+    i18n: 51credit
+  desc:
+    detail:
+    i18n: 51credit_desc
+  date:
+    detail:
+    i18n: 51credit_date
+  job:
+    detail:
+    i18n: 51credit_job
   icon: fa-plus-square
