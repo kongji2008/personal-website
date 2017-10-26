@@ -16,8 +16,8 @@ author:  # change following line to your infomation.
   last_name: Kong  # Be used at index page about me section.
   avatar: /static/assets/img/landing/avatar.jpg  # upload your avatar at directory and edit it.
   github_username: kongji2008  # Leave blank if you don't have now
-  linkedin_id: kongji2008 # Leave blank if you don't have now
-  facebook_username: kongji2008  # Leave blank if you don't have now
+  linkedin_id: kongji # Leave blank if you don't have now
+  facebook_username: kong.andy.92  # Leave blank if you don't have now
   twitter_username: kongji2008  # Leave blank if you don't have now
   email: kongji2008@gmail.com  # Leave blank if you don't have now
   cv:  # An online CV can be printed as PDF, leave blank if you don't have now
@@ -28,7 +28,7 @@ author:  # change following line to your infomation.
   skill_icon2:
     - name: fa-linux
     - name: icon-apache
-  desc: Introduce myself will be here.  # Describe yourself.
+  desc: A father & Java Architect & WPO fans & CDN startup company & Full Stack engineer.  # Describe yourself.
 
 # comment
 disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
