@@ -3,15 +3,61 @@
   <channel>
     <title>Cloud Infinite</title>
     <description>AndyKong's blog,use Jekyll and github pages.</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 26 Oct 2017 23:53:31 +0800</pubDate>
-    <lastBuildDate>Thu, 26 Oct 2017 23:53:31 +0800</lastBuildDate>
-    <generator>Jekyll v3.5.2</generator>
+    <link>https://kongji2008.github.io/</link>
+    <atom:link href="https://kongji2008.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 28 Mar 2018 18:15:45 +0800</pubDate>
+    <lastBuildDate>Wed, 28 Mar 2018 18:15:45 +0800</lastBuildDate>
+    <generator>Jekyll v3.7.3</generator>
+    
+      <item>
+        <title>Set Up My Local Dev Environment</title>
+        <description>&lt;h3 id=&quot;step&quot;&gt;Step&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Install iTerm2 -&amp;gt; https://www.iterm2.com/downloads.html&lt;/li&gt;
+  &lt;li&gt;Install Prezto -&amp;gt; https://github.com/sorin-ionescu/prezto
+    &lt;ul&gt;
+      &lt;li&gt;make sure that you dont have a .zshrc, and if you do , to rename it for the time being.&lt;/li&gt;
+      &lt;li&gt;prezto’s install script needs to write to a new .zshrc file so it can get loaded up when you start a new terminal&lt;/li&gt;
+      &lt;li&gt;after you run the install script, just copy and paste your old .zshrc stuff into the new one.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Install Sublime -&amp;gt; https://www.sublimetext.com/3
+    &lt;ul&gt;
+      &lt;li&gt;Some of packages should install
+        &lt;ul&gt;
+          &lt;li&gt;https://packagecontrol.io/packages/MarkdownLivePreview&lt;/li&gt;
+          &lt;li&gt;https://github.com/saltstack/sublime-text&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Install Slack&lt;/li&gt;
+  &lt;li&gt;Install Java&lt;/li&gt;
+  &lt;li&gt;Darcula Theme for IDE https://draculatheme.com/&lt;/li&gt;
+  &lt;li&gt;Install VistulBox&lt;/li&gt;
+  &lt;li&gt;Install Docker for mac&lt;/li&gt;
+  &lt;li&gt;Install Docker-machine (curl -L https://github.com/docker/machine/releases/download/v0.14.0/docker-machine-&lt;code class=&quot;highlighter-rouge&quot;&gt;uname -s&lt;/code&gt;-&lt;code class=&quot;highlighter-rouge&quot;&gt;uname -m&lt;/code&gt; &amp;gt;/usr/local/bin/docker-machine &amp;amp;&amp;amp; \
+chmod +x /usr/local/bin/docker-machine)&lt;/li&gt;
+  &lt;li&gt;Install Homebrew&lt;/li&gt;
+  &lt;li&gt;brew install node&lt;/li&gt;
+  &lt;li&gt;brew install rbenv&lt;/li&gt;
+  &lt;li&gt;rbenv install 2.3.6&lt;/li&gt;
+  &lt;li&gt;rbenv rehash&lt;/li&gt;
+  &lt;li&gt;rbenv global 2.3.6&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 28 Mar 2018 00:00:00 +0800</pubDate>
+        <link>https://kongji2008.github.io/java/2018/03/28/local-machine-config.html</link>
+        <guid isPermaLink="true">https://kongji2008.github.io/java/2018/03/28/local-machine-config.html</guid>
+        
+        
+        <category>Java</category>
+        
+      </item>
     
       <item>
         <title>海外站长遇到的那些事</title>
-        <description>&lt;h3 id=&quot;老王遇到的问题一&quot;&gt;老王遇到的问题一&lt;/h3&gt;
+        <description>&lt;h3 id=&quot;老王遇到的问题&quot;&gt;老王遇到的问题&lt;/h3&gt;
 
 &lt;p&gt;老王有一个网站www.foo.com常年放在国外服务器上，原因嘛，无外乎国外主机便宜，使用方便，还不需要备案。随着最近业务发展顺利，网站的流量逐渐增加，由于大量的访问都来自于国内大陆地区，开始有访问者不断和老王抱怨网站访问速度慢和不稳定的问题。老王找来了懂技术的老刘来帮忙优化他的网站访问速度，老刘说弄个CDN试试，需要做这么几件事：&lt;/p&gt;
 
@@ -31,9 +77,9 @@
 
 &lt;h3 id=&quot;rewriteurl黑科技&quot;&gt;RewriteURL？黑科技？&lt;/h3&gt;
 
-&lt;p&gt;按照老刘的说法，魔门云为了服务好这一场景（网站服务器在海外，但是访问者确来自于国内），做了以下这些事：&lt;/p&gt;
+&lt;p&gt;按照老刘的说法，魔门云为了服务好这一场景（网站服务器在海外，但是访问者却来自于国内），做了以下这些事：&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;在东亚地区（香港、台湾、韩国、日本）都联系了各种VPS和VPC，保证了大陆地区到魔门云节点的网络连通稳定性，同时也保证了魔门云节点到其他海外地区（美国）的网络连通稳定性。&lt;/li&gt;
+  &lt;li&gt;在东亚地区（香港、台湾、韩国、日本）各种VPS和VPC上建立节点，保证了大陆地区到魔门云节点的网络连通稳定性，同时也保证了魔门云节点到其他海外地区（美国）的网络连通稳定性。&lt;/li&gt;
   &lt;li&gt;Rewrite URL功能——当老王的网页响应经过魔门云网络的时候，页面内的所有www.foo.com域名下的静态资源都会被自动改写到魔门云的CDN域名上（例如 cdn-x-y.momentcdn.com），这些静态资源的请求最终会被路由并且被缓存到魔门云在国内的CDN合作伙伴节点上。从而大大的提高了国内访问者的访问静态内容的速度。&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -41,14 +87,13 @@
 &lt;ul&gt;
   &lt;li&gt;static.abc.com域名在国内没有备案？没关系，魔门云可以RewriteURL到国内CDN。&lt;/li&gt;
   &lt;li&gt;重构网站的资源URL是个大活？没关系，魔门云可以自动RewriteURL到CDN的域名上。&lt;/li&gt;
-  &lt;li&gt;动态内容不能被缓存？没关系，魔门云可以在东亚地区缓存部分内容。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;老王遇到的问题二&quot;&gt;老王遇到的问题二&lt;/h3&gt;
+&lt;h3 id=&quot;动态页面不能被缓存&quot;&gt;动态页面不能被缓存？&lt;/h3&gt;
 
 &lt;p&gt;老王的网页很多都是动态内容，不能被CDN缓存，所以大部分请求还是会经过全链路（国内-&amp;gt;魔门云网络-&amp;gt;老王的国外服务器），有些时候，因为链路过长，导致部分请求还是会慢。老刘告诉老王，这个问题魔门云也有黑科技解决。老王一惊，这魔门云有这么多牛D的黑科技？&lt;/p&gt;
 
-&lt;p&gt;按照老刘的说法，这种黑科技叫PageRunner，大概意思是让动态页面缓存的部分往离国内近的地方跑跑。对于大多数动态页面来说，虽然内容不能全部被缓存，但是页面里的大多数静态JS和CSS资源其实对于每个访问者来说都是相同的。魔门云就是依靠浏览器预取技术，把老王的动态网页内包含的这部分内容缓存在Edge节点（东亚地区），一旦访问请求到了魔门云网络，就先把这部分缓存内容返回给浏览器（国内），同时也把请求转发到老王的国外服务器（美国），当拿到全部响应后，再把剩余部分内容返回给浏览器（国内）。看吧！老王的问题二是不是也解决了？&lt;/p&gt;
+&lt;p&gt;按照老刘的说法，这种黑科技叫PageRunner，大概意思是让动态页面缓存的部分往离国内近的地方跑跑。对于大多数动态页面来说，虽然内容不能全部被缓存，但是页面里的大多数静态JS和CSS资源其实对于每个访问者来说都是相同的。魔门云就是依靠浏览器预取技术，把老王的动态网页内包含的这部分内容缓存在Edge节点（东亚地区），一旦访问请求到了魔门云网络，就先把这部分缓存内容返回给浏览器（国内），同时也把请求转发到老王的国外服务器（美国），当拿到全部响应后，再把剩余部分内容返回给浏览器（国内）。看吧！老王的第二个问题是不是也解决了？&lt;/p&gt;
 
 &lt;h3 id=&quot;隔壁老郑遇到的问题&quot;&gt;隔壁老郑遇到的问题&lt;/h3&gt;
 
@@ -64,8 +109,8 @@
 
 </description>
         <pubDate>Tue, 31 Jan 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/wpo/2017/01/31/cachemoment-intro-001.html</link>
-        <guid isPermaLink="true">http://localhost:4000/wpo/2017/01/31/cachemoment-intro-001.html</guid>
+        <link>https://kongji2008.github.io/wpo/2017/01/31/cachemoment-intro-001.html</link>
+        <guid isPermaLink="true">https://kongji2008.github.io/wpo/2017/01/31/cachemoment-intro-001.html</guid>
         
         <category>CDN</category>
         

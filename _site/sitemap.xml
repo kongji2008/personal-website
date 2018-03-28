@@ -2,48 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>http://localhost:4000/wpo/2017/01/31/cachemoment-intro-001.html</loc>
+        <loc>https://kongji2008.github.io/java/2018/03/28/local-machine-config.html</loc>
+    </url>
+
+    <url>
+        <loc>https://kongji2008.github.io/wpo/2017/01/31/cachemoment-intro-001.html</loc>
     </url>
 
 
     <url>
-        <loc>http://localhost:4000/404.html</loc>
+        <loc>https://kongji2008.github.io/404.html</loc>
     </url>
 
     <url>
-        <loc>http://localhost:4000/blog/</loc>
+        <loc>https://kongji2008.github.io/blog/</loc>
     </url>
 
     <url>
-        <loc>http://localhost:4000/static/css/custom.css</loc>
+        <loc>https://kongji2008.github.io/static/css/custom.css</loc>
     </url>
 
     <url>
-        <loc>http://localhost:4000/feed.xml</loc>
+        <loc>https://kongji2008.github.io/feed.xml</loc>
     </url>
 
     <url>
-        <loc>http://localhost:4000/</loc>
+        <loc>https://kongji2008.github.io/</loc>
     </url>
 
     <url>
-        <loc>http://localhost:4000/java/</loc>
+        <loc>https://kongji2008.github.io/java/</loc>
     </url>
 
     <url>
-        <loc>http://localhost:4000/robots.txt</loc>
+        <loc>https://kongji2008.github.io/robots.txt</loc>
     </url>
 
     <url>
-        <loc>http://localhost:4000/search.json</loc>
+        <loc>https://kongji2008.github.io/search.json</loc>
     </url>
 
     <url>
-        <loc>http://localhost:4000/sitemap.xml</loc>
+        <loc>https://kongji2008.github.io/sitemap.xml</loc>
     </url>
 
     <url>
-        <loc>http://localhost:4000/wpo/</loc>
+        <loc>https://kongji2008.github.io/wpo/</loc>
     </url>
 
 </urlset>
